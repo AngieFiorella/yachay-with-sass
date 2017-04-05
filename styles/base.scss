@@ -270,17 +270,31 @@ h2 {
     justify-content: center;
     text-align: center;
     font-weight: 300;
-      .big-size-price {
-          font-size: 2.5;
+  }
+}
+.big-size-price {
+          font-size: 5em;
       }
       .little-size-price {
-        font-size: 1em;
+        font-size: 2em;
         text-align: left;
       }
       .month-detail {
-        font-size: 0.7em;
+        font-size: 1.3em;
       }
-  }
+.fixing-items.price-info {
+  display: flex;
+  justify-content: center;
+  .big-size-price {
+            font-size: 2em;
+        }
+        .little-size-price {
+          font-size: 1em;
+          text-align: left;
+        }
+        .month-detail {
+          font-size: 0.7em;
+        }
 }
 .button-primary {
   background-color: $orange;
