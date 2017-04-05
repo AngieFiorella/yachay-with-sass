@@ -58,13 +58,14 @@ i.call {
 .menu-button {
   background-color: $deepblue;
   color: $white;
-  display: none;
+  display: none; //De esta manera hacemos que la clase menu-button no se muestre cuando la pantalla ocupa + 1200px de ancho
   font-size: .8em;
   font-weight: 500;
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
 }
+
 .menu {
   align-items: center;
   display: flex;
@@ -512,6 +513,7 @@ i.fa-book, i.fa-line-chart {
     margin-right: 5px;
   }
   .number { font-size: 1em; }
+
   .menu li { font-size: .8em }
 }
 
@@ -527,6 +529,7 @@ i.fa-book, i.fa-line-chart {
   .main-menu.active .menu-button { background-color: $orange; }
 
   .menu .house-bg { display: none; }
+
   .menu {
     display: none;
     li {
@@ -551,4 +554,21 @@ i.fa-book, i.fa-line-chart {
     &.active .menu-icon.minus { display: inline-block; }
     &.active .menu-icon.plus { display: none; }
   }
+  .information {
+    display: none; }
+  .main-information { padding: 92px; }
+  .card {
+    width: 80%;
+    margin-bottom: 60px;
+  }
+  .plans {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-page article{
+    display: none;
+    &:last-of-type { display: block;}
+  }
+  .divider { display: none; }
+
 }

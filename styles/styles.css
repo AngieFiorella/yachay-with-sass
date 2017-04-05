@@ -581,7 +581,8 @@ i.fa-book, i.fa-line-chart {
     position: absolute;
     left: 0;
     right: 0;
-    display: block; }
+    display: block;
+    z-index: 99999; }
 
   .main-menu .menu-icon {
     font-size: 1em; }
@@ -592,6 +593,28 @@ i.fa-book, i.fa-line-chart {
   .main-menu.active .menu-icon.minus {
     display: inline-block; }
   .main-menu.active .menu-icon.plus {
+    display: none; }
+
+  .information {
+    display: none; }
+
+  .main-information {
+    padding: 92px; }
+
+  .card {
+    width: 80%;
+    margin-bottom: 60px; }
+
+  .plans {
+    display: flex;
+    flex-direction: column; }
+
+  .footer-page article {
+    display: none; }
+    .footer-page article:last-of-type {
+      display: block; }
+
+  .divider {
     display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
