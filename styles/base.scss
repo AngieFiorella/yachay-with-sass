@@ -53,6 +53,28 @@ i.call {
 .main-menu {
   color: $white;
   padding: 0;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    max-width: 100%;
+    background-color: $deepblue;
+    box-shadow: 0 5px 10px rgba($black, .2);
+    .menu {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .menu li {
+      padding: 15px;
+      height: 50px;
+    }
+    .menu .house-bg,
+    .menu li:last-of-type {
+      padding: 10px;
+    }
+  }
 }
 
 .menu-button {
@@ -64,6 +86,7 @@ i.call {
   padding: 20px;
   text-align: center;
   text-transform: uppercase;
+  transition: all .3s ease;
 }
 
 .menu {
@@ -500,7 +523,7 @@ i.fa-book, i.fa-line-chart {
 }
 
 @media screen and (max-width: 1200px) {
-  .main-information { padding: 90px 25px; }
+  .main-information { padding: 90px 25px;}
 }
 
 @media screen and (max-width: 768px) {
@@ -536,8 +559,18 @@ i.fa-book, i.fa-line-chart {
     .logo { width: 150px; }
   }
 
-  .menu-button { display: block; }
-  .main-menu.active .menu-button { background-color: $orange; }
+  .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  .main-menu {
+    &.active .menu-button { background-color: $orange; }
+    &.sticky .menu-button {
+      padding: 10px;
+      box-shadow: 0 5px 10px rgba($black, .2);
+    }
+    &.sticky .menu { width: 100%; }
+  }
 
   .menu .house-bg { display: none; }
 
@@ -550,11 +583,10 @@ i.fa-book, i.fa-line-chart {
     }
   }
   .main-menu.active .menu {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
-    display: block;
-    z-index: 99999;
   }
   .main-menu {
     .menu-icon {

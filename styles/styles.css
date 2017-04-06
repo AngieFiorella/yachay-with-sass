@@ -119,6 +119,24 @@ i.call {
 .main-menu {
   color: #FFF;
   padding: 0; }
+  .main-menu.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    max-width: 100%;
+    background-color: #293847;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+    .main-menu.sticky .menu {
+      width: 80%;
+      margin: 0 auto; }
+    .main-menu.sticky .menu li {
+      padding: 15px;
+      height: 50px; }
+    .main-menu.sticky .menu .house-bg,
+    .main-menu.sticky .menu li:last-of-type {
+      padding: 10px; }
 
 .menu-button {
   background-color: #293847;
@@ -128,7 +146,8 @@ i.call {
   font-weight: 500;
   padding: 20px;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all .3s ease; }
 
 .menu {
   align-items: center;
@@ -573,10 +592,16 @@ i.fa-book, i.fa-line-chart {
       width: 150px; }
 
   .menu-button {
-    display: block; }
+    display: block;
+    cursor: pointer; }
 
   .main-menu.active .menu-button {
     background-color: #E85B21; }
+  .main-menu.sticky .menu-button {
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .main-menu.sticky .menu {
+    width: 100%; }
 
   .menu .house-bg {
     display: none; }
@@ -589,11 +614,10 @@ i.fa-book, i.fa-line-chart {
       padding: 15px; }
 
   .main-menu.active .menu {
+    display: block;
     position: absolute;
     left: 0;
-    right: 0;
-    display: block;
-    z-index: 99999; }
+    right: 0; }
 
   .main-menu .menu-icon {
     font-size: 1em; }
