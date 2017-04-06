@@ -515,6 +515,17 @@ i.fa-book, i.fa-line-chart {
   .number { font-size: 1em; }
 
   .menu li { font-size: .8em }
+  .card {
+    width: 50%;
+    margin-bottom: 100px;
+  }
+  .plans {
+    display: flex;
+    flex-direction: column;
+  }
+  .hosting-features {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
