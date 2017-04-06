@@ -508,8 +508,8 @@ i.fa-book, i.fa-line-chart {
   color: #494949;
   font-size: 1.8em;
   font-weight: 500;
-  margin-bottom: 40px;
   margin: 0;
+  margin-bottom: 40px;
   text-align: center; }
 
 .slider {
@@ -534,7 +534,8 @@ i.fa-book, i.fa-line-chart {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: all .3s; }
+  transition: all .3s;
+  display: none; }
   .controller:hover {
     color: #E85B21; }
   .controller.left {

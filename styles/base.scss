@@ -480,8 +480,8 @@ i.fa-book, i.fa-line-chart {
   color: $dark-gray;
   font-size: 1.8em;
   font-weight: 500;
-  margin-bottom: 40px;
   margin: 0;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -506,6 +506,7 @@ i.fa-book, i.fa-line-chart {
   top: 50%;
   transform: translateY(-50%);
   transition: all .3s;
+  display: none;
   &:hover { color: $orange; }
   &.left { left: 0; }
   &.right { right: 0; }
