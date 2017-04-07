@@ -66,14 +66,10 @@ i.call {
       width: 85%;
       margin: 0 auto;
     }
-    .menu li {
-      padding: 15px;
-      height: 50px;
-    }
-    .menu .house-bg,
+    /*.menu .house-bg,
     .menu li:last-of-type {
       padding: 10px;
-    }
+    }*/
   }
 }
 
@@ -94,12 +90,13 @@ i.call {
   @include display-flex;
   z-index: 3;
   li {
+    padding: 15px;
     background-color: $deepblue;
     border-right: 1px solid $black;
     @include flex-basis(15%);
-    text-align: center;
+    //text-align: center;
     transition: all .3s;
-    height: 60px;
+    height: 60px; //Se le asigna un alto fijo
     cursor: pointer;
     @extend .flex-center;
     &:hover {
@@ -109,19 +106,19 @@ i.call {
     &:last-of-type {
       border-right: 0;
       @include flex-basis(30%);
-      padding: 15px;
       &:hover div { border: 1px solid $white; }
     }
     a {
       font-size: 0.9em;
       font-weight: 300;
       text-transform: uppercase;
+      cursor: pointer;
     }
   }
   .house-bg {
     background-color: $medium-gray;
     @include flex-basis(10%);
-    padding: 16px 20px 15px;
+    padding: 0 20px;
     transition: all .3s;
     &:hover {
       background-color: $orange;
@@ -152,14 +149,15 @@ i.house { font-size: 2em; }
 }
 
 i.server-image {
-  @include align-items(center);
+  //@include align-items(center);
   background-color: $orange;
   border-radius: 100%;
   color: $white;
-  @include display-flex;
+  //@include display-flex;
   font-size: 2em;
   height: 70px;
-  @include justify-content(center);
+  //@include justify-content(center);
+  @extend .flex-center;
   margin: 0px;
   padding: 0px;
   width: 70px;
@@ -186,6 +184,7 @@ h2 {
   font-size: 2.5em;
   margin-bottom: 15px;
   margin-top: 15px;
+  &.features-service { width: 45%; }
 }
 
 .information { @include flex-basis(70%); }
@@ -199,7 +198,7 @@ h2 {
 
 .bullet {
   margin-right: 10px;
-  width: 15px;
+  //width: 15px;
 }
 
 .orange-left {
@@ -218,46 +217,34 @@ h2 {
 
 .big-size-price {
   color: $white;
-  display: inline-block;
-  font-size: 2em;
+  //display: inline-block;
+  font-size: 5.2em;
   font-weight: inherit;
-  text-align: right;
-  vertical-align: middle;
+  padding: 0;
+  //text-align: right;
+  //vertical-align: middle;
 }
 
 .little-size-price {
   color: $white;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: inherit;
   text-align: right;
 }
 
 .month-detail {
   color: $orange;
-  font-size: 0.7em;
+  font-size: 1.3em;
   font-weight: inherit;
   text-align: right;
 }
 
 .fixing-items {
   @include display-flex;
+  @include align-items(flex-start);
   font-weight: 500;
   @include justify-content(flex-end);
-  .price-info {
-    font-weight: 300;
-    @include justify-content(center);
-    text-align: center;
-  }
 }
-
-.big-size-price { font-size: 5em; }
-
-.little-size-price {
-  font-size: 2em;
-  text-align: left;
-}
-
-.month-detail { font-size: 1.3em; }
 
 .fixing-items.price-info {
   @include display-flex;
@@ -324,33 +311,12 @@ h2 {
   @include align-items(center);
   @include display-flex;
   @include justify-content(center);
-  padding-bottom: 10px;
-  padding-top: 20px;
+  padding: 15px;
 }
 
 .price-card {
   background-color: $dark-gray;
   padding: 16px;
-}
-.little-money {
-  color: $white;
-  @include display-flex;
-  @include flex-direction(column);
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-left: 5px;
-}
-
-.big-money {
-  color: $white;
-  display: inline;
-  font-size: 2.5em;
-  font-weight: 500;
-}
-
-.month {
-  color: $orange;
-  font-size: 0.6em;
 }
 
 .customer-info {
@@ -362,7 +328,6 @@ h2 {
 .features-card {
   color: $dark-gray;
   font-weight: 300;
-  line-height: 35px;
   padding: 20px 40px;
 }
 
@@ -382,7 +347,7 @@ b { font-weight: 500; }
       height: 6px;
       left: -15px;
       position: absolute;
-      top: 10px;
+      top: 7px;
       width: 6px;
     }
   }
@@ -394,7 +359,7 @@ b { font-weight: 500; }
   color: $white;
   cursor: pointer;
   font-weight: 500;
-  padding: 8px;
+  padding: 12px;
   text-transform: uppercase;
   width: 100%;
 }
@@ -407,7 +372,7 @@ footer {
 .footer-page {
   color: $white;
   @include display-flex;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footer-info {

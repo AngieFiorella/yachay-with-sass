@@ -121,7 +121,7 @@ i.call {
   font-size: 1.3em;
   font-weight: 500; }
 
-.flex-center, .menu li, .carousel-wrapper .owl-carousel.owl-drag .owl-item {
+.flex-center, .menu li, i.server-image, .carousel-wrapper .owl-carousel.owl-drag .owl-item {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
@@ -153,16 +153,14 @@ i.call {
     z-index: 999999;
     max-width: 100%;
     background-color: #293847;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*.menu .house-bg,
+    .menu li:last-of-type {
+      padding: 10px;
+    }*/ }
     .main-menu.sticky .menu {
       width: 85%;
       margin: 0 auto; }
-    .main-menu.sticky .menu li {
-      padding: 15px;
-      height: 50px; }
-    .main-menu.sticky .menu .house-bg,
-    .main-menu.sticky .menu li:last-of-type {
-      padding: 10px; }
 
 .menu-button {
   background-color: #293847;
@@ -189,13 +187,13 @@ i.call {
   display: flex;
   z-index: 3; }
   .menu li {
+    padding: 15px;
     background-color: #293847;
     border-right: 1px solid #000;
     -webkit-flex-basis: 15%;
     -moz-flex-basis: 15%;
     -ms-flex-preferred-size: 15%;
     flex-basis: 15%;
-    text-align: center;
     transition: all .3s;
     height: 60px;
     cursor: pointer; }
@@ -207,21 +205,21 @@ i.call {
       -webkit-flex-basis: 30%;
       -moz-flex-basis: 30%;
       -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-      padding: 15px; }
+      flex-basis: 30%; }
       .menu li:last-of-type:hover div {
         border: 1px solid #FFF; }
     .menu li a {
       font-size: 0.9em;
       font-weight: 300;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      cursor: pointer; }
   .menu .house-bg {
     background-color: #B5B5B5;
     -webkit-flex-basis: 10%;
     -moz-flex-basis: 10%;
     -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
-    padding: 16px 20px 15px;
+    padding: 0 20px;
     transition: all .3s; }
     .menu .house-bg:hover {
       background-color: #E85B21;
@@ -248,27 +246,11 @@ i.house {
   min-height: 500px; }
 
 i.server-image {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
   background-color: #E85B21;
   border-radius: 100%;
   color: #FFF;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 2em;
   height: 70px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
   margin: 0px;
   padding: 0px;
   width: 70px; }
@@ -298,6 +280,8 @@ h2 {
   font-size: 2.5em;
   margin-bottom: 15px;
   margin-top: 15px; }
+  h2.features-service {
+    width: 45%; }
 
 .information {
   -webkit-flex-basis: 70%;
@@ -316,8 +300,7 @@ h2 {
   line-height: 2em; }
 
 .bullet {
-  margin-right: 10px;
-  width: 15px; }
+  margin-right: 10px; }
 
 .orange-left {
   color: #E85B21;
@@ -343,21 +326,19 @@ h2 {
 
 .big-size-price {
   color: #FFF;
-  display: inline-block;
-  font-size: 2em;
+  font-size: 5.2em;
   font-weight: inherit;
-  text-align: right;
-  vertical-align: middle; }
+  padding: 0; }
 
 .little-size-price {
   color: #FFF;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: inherit;
   text-align: right; }
 
 .month-detail {
   color: #E85B21;
-  font-size: 0.7em;
+  font-size: 1.3em;
   font-weight: inherit;
   text-align: right; }
 
@@ -368,30 +349,17 @@ h2 {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
   font-weight: 500;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   -moz-justify-content: flex-end;
   justify-content: flex-end; }
-  .fixing-items .price-info {
-    font-weight: 300;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center;
-    text-align: center; }
-
-.big-size-price {
-  font-size: 5em; }
-
-.little-size-price {
-  font-size: 2em;
-  text-align: left; }
-
-.month-detail {
-  font-size: 1.3em; }
 
 .fixing-items.price-info {
   display: -webkit-flex;
@@ -484,40 +452,11 @@ h2 {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  padding-bottom: 10px;
-  padding-top: 20px; }
+  padding: 15px; }
 
 .price-card {
   background-color: #494949;
   padding: 16px; }
-
-.little-money {
-  color: #FFF;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-left: 5px; }
-
-.big-money {
-  color: #FFF;
-  display: inline;
-  font-size: 2.5em;
-  font-weight: 500; }
-
-.month {
-  color: #E85B21;
-  font-size: 0.6em; }
 
 .customer-info {
   color: #FFF;
@@ -527,7 +466,6 @@ h2 {
 .features-card {
   color: #494949;
   font-weight: 300;
-  line-height: 35px;
   padding: 20px 40px; }
 
 b {
@@ -548,7 +486,7 @@ b {
       height: 6px;
       left: -15px;
       position: absolute;
-      top: 10px;
+      top: 7px;
       width: 6px; }
 
 .button-card {
@@ -557,7 +495,7 @@ b {
   color: #FFF;
   cursor: pointer;
   font-weight: 500;
-  padding: 8px;
+  padding: 12px;
   text-transform: uppercase;
   width: 100%; }
 
@@ -573,7 +511,7 @@ footer {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 .footer-info {
   border-right: 0.8px solid #757C82;
