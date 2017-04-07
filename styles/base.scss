@@ -275,12 +275,11 @@ h2 {
   border: 0;
   color: $white;
   cursor: pointer;
-  @include display-flex;
   font-size: 1.2em;
   font-weight: 500;
-  @include justify-content(center);
   margin-top: 15px;
   padding: 15px;
+  text-align: center;
   text-transform: uppercase;
   transition: all .3s;
   width: 100%;
@@ -364,13 +363,13 @@ h2 {
   color: $dark-gray;
   font-weight: 300;
   line-height: 35px;
-  padding-bottom: 30px;
+  padding: 20px 40px;
 }
 
 b { font-weight: 500; }
 
 .just-features {
-  padding: 20px 50px;
+  margin-bottom: 30px;
   li {
     line-height: 22px;
     margin-bottom: 15px;
@@ -394,13 +393,10 @@ b { font-weight: 500; }
   border: 0;
   color: $white;
   cursor: pointer;
-  @include display-flex;
   font-weight: 500;
-  @include justify-content(center);
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding: 8px;
   text-transform: uppercase;
-  width: 80%;
+  width: 100%;
 }
 
 footer {

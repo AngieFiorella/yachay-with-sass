@@ -1,4 +1,4 @@
-@import url(owl-carousel.css);
+@import url(owlcursor: pointer;-carousel.css);
 * {
   font-weight: 300;
   margin: 0 auto;
@@ -418,21 +418,11 @@ h2 {
   border: 0;
   color: #FFF;
   cursor: pointer;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 1.2em;
   font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
   margin-top: 15px;
   padding: 15px;
+  text-align: center;
   text-transform: uppercase;
   transition: all .3s;
   width: 100%; }
@@ -538,13 +528,13 @@ h2 {
   color: #494949;
   font-weight: 300;
   line-height: 35px;
-  padding-bottom: 30px; }
+  padding: 20px 40px; }
 
 b {
   font-weight: 500; }
 
 .just-features {
-  padding: 20px 50px; }
+  margin-bottom: 30px; }
   .just-features li {
     line-height: 22px;
     margin-bottom: 15px;
@@ -566,22 +556,10 @@ b {
   border: 0;
   color: #FFF;
   cursor: pointer;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   font-weight: 500;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding: 8px;
   text-transform: uppercase;
-  width: 80%; }
+  width: 100%; }
 
 footer {
   background-color: #293847;
