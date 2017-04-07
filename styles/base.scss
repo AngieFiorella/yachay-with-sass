@@ -63,7 +63,7 @@ i.call {
     background-color: $deepblue;
     box-shadow: 0 5px 10px rgba($black, .2);
     .menu {
-      width: 80%;
+      width: 85%;
       margin: 0 auto;
     }
     .menu li {
@@ -97,10 +97,11 @@ i.call {
     background-color: $deepblue;
     border-right: 1px solid $black;
     @include flex-basis(15%);
-    padding: 20px;
     text-align: center;
     transition: all .3s;
     height: 60px;
+    cursor: pointer;
+    @extend .flex-center;
     &:hover {
       background-color: $blue;
       cursor: pointer;
@@ -109,10 +110,7 @@ i.call {
       border-right: 0;
       @include flex-basis(30%);
       padding: 15px;
-      &:hover div {
-        border: 1px solid $white;
-        cursor: pointer;
-      }
+      &:hover div { border: 1px solid $white; }
     }
     a {
       font-size: 0.9em;
@@ -136,8 +134,7 @@ i.house { font-size: 2em; }
 
 .orange-border {
   border: 1px solid $orange;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px;
   text-transform: uppercase;
   transition: all .3s;
 }
@@ -408,18 +405,20 @@ b { font-weight: 500; }
 
 footer {
   background-color: $deepblue;
-  padding: 70px 30px;
+  padding: 50px 0;
 }
 
 .footer-page {
   color: $white;
   @include display-flex;
+  margin-bottom: 10px;
 }
 
 .footer-info {
   border-right: 0.8px solid #757C82;
   @include flex-basis(25%);
   text-align: center;
+  padding: 0 5px;
   &:last-of-type { border-right: 0; }
 }
 
@@ -448,8 +447,9 @@ footer {
 
 .divider {
   color: $medium-gray;
-  position: absolute;
-  right: 150px;
+  @include display-flex;
+  @include flex-direction(column);
+  @include align-items(flex-end);
   a span {
     color: $medium-gray;
     font-size: 1.3em;
@@ -498,7 +498,8 @@ i.fa-book, i.fa-line-chart {
   top: 50%;
   transform: translateY(-50%);
   transition: all .3s;
-  display: none;
+  display: block;
+  cursor: pointer;
   &:hover { color: $orange; }
   &.left { left: 0; }
   &.right { right: 0; }
@@ -514,6 +515,7 @@ i.fa-book, i.fa-line-chart {
 
 @media screen and (max-width: 1200px) {
   .main-information { padding: 90px 25px;}
+  .slider { padding: 50px 15px; }
 }
 
 @media screen and (max-width: 768px) {
@@ -530,15 +532,22 @@ i.fa-book, i.fa-line-chart {
   .menu li { font-size: .8em }
   .card {
     width: 50%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    margin-top: 0;
+    &:first-of-type { margin-top: -50px; }
+    &:last-of-type { margin-bottom: 0; }
   }
   .plans {
     @include display-flex;
     @include flex-direction(column);
   }
-  .hosting-features {
-    display: none;
+  .hosting-features { display: none; }
+  .slider { padding: 50px 15px; }
+  .orange-border {
+    border: 0;
+    padding: 0;
   }
+  .menu li:last-of-type:hover .orange-border { border: 0; }
 }
 
 @media screen and (max-width: 480px) {
@@ -591,7 +600,7 @@ i.fa-book, i.fa-line-chart {
     display: none; }
   .card {
     width: 100%;
-    margin-bottom: 80px;
+    &:last-of-type { margin-bottom: 0; }
   }
   .plans {
     @include display-flex;
@@ -602,8 +611,6 @@ i.fa-book, i.fa-line-chart {
     &:last-of-type { display: block;}
   }
   .divider { display: none; }
-  .price {
-    margin: 0 auto;
-  }
+  .price { margin: 0 auto; }
 
 }

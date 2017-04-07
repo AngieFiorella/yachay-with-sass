@@ -121,7 +121,7 @@ i.call {
   font-size: 1.3em;
   font-weight: 500; }
 
-.flex-center, .carousel-wrapper .owl-carousel.owl-drag .owl-item {
+.flex-center, .menu li, .carousel-wrapper .owl-carousel.owl-drag .owl-item {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
@@ -155,7 +155,7 @@ i.call {
     background-color: #293847;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
     .main-menu.sticky .menu {
-      width: 80%;
+      width: 85%;
       margin: 0 auto; }
     .main-menu.sticky .menu li {
       padding: 15px;
@@ -195,10 +195,10 @@ i.call {
     -moz-flex-basis: 15%;
     -ms-flex-preferred-size: 15%;
     flex-basis: 15%;
-    padding: 20px;
     text-align: center;
     transition: all .3s;
-    height: 60px; }
+    height: 60px;
+    cursor: pointer; }
     .menu li:hover {
       background-color: #355069;
       cursor: pointer; }
@@ -210,8 +210,7 @@ i.call {
       flex-basis: 30%;
       padding: 15px; }
       .menu li:last-of-type:hover div {
-        border: 1px solid #FFF;
-        cursor: pointer; }
+        border: 1px solid #FFF; }
     .menu li a {
       font-size: 0.9em;
       font-weight: 300;
@@ -233,8 +232,7 @@ i.house {
 
 .orange-border {
   border: 1px solid #E85B21;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding: 5px;
   text-transform: uppercase;
   transition: all .3s; }
 
@@ -587,7 +585,7 @@ b {
 
 footer {
   background-color: #293847;
-  padding: 70px 30px; }
+  padding: 50px 0; }
 
 .footer-page {
   color: #FFF;
@@ -596,7 +594,8 @@ footer {
   display: -moz-flex;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-bottom: 10px; }
 
 .footer-info {
   border-right: 0.8px solid #757C82;
@@ -604,7 +603,8 @@ footer {
   -moz-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
-  text-align: center; }
+  text-align: center;
+  padding: 0 5px; }
   .footer-info:last-of-type {
     border-right: 0; }
 
@@ -630,8 +630,23 @@ footer {
 
 .divider {
   color: #B5B5B5;
-  position: absolute;
-  right: 150px; }
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
   .divider a span {
     color: #B5B5B5;
     font-size: 1.3em;
@@ -681,7 +696,8 @@ i.fa-book, i.fa-line-chart {
   top: 50%;
   transform: translateY(-50%);
   transition: all .3s;
-  display: none; }
+  display: block;
+  cursor: pointer; }
   .controller:hover {
     color: #E85B21; }
   .controller.left {
@@ -697,7 +713,10 @@ i.fa-book, i.fa-line-chart {
 
 @media screen and (max-width: 1200px) {
   .main-information {
-    padding: 90px 25px; } }
+    padding: 90px 25px; }
+
+  .slider {
+    padding: 50px 15px; } }
 @media screen and (max-width: 768px) {
   i.call {
     font-size: 1.2em;
@@ -715,7 +734,12 @@ i.fa-book, i.fa-line-chart {
 
   .card {
     width: 50%;
-    margin-bottom: 100px; }
+    margin-bottom: 50px;
+    margin-top: 0; }
+    .card:first-of-type {
+      margin-top: -50px; }
+    .card:last-of-type {
+      margin-bottom: 0; }
 
   .plans {
     display: -webkit-flex;
@@ -732,7 +756,17 @@ i.fa-book, i.fa-line-chart {
     flex-direction: column; }
 
   .hosting-features {
-    display: none; } }
+    display: none; }
+
+  .slider {
+    padding: 50px 15px; }
+
+  .orange-border {
+    border: 0;
+    padding: 0; }
+
+  .menu li:last-of-type:hover .orange-border {
+    border: 0; } }
 @media screen and (max-width: 480px) {
   .support {
     display: none; }
@@ -791,8 +825,9 @@ i.fa-book, i.fa-line-chart {
     display: none; }
 
   .card {
-    width: 100%;
-    margin-bottom: 80px; }
+    width: 100%; }
+    .card:last-of-type {
+      margin-bottom: 0; }
 
   .plans {
     display: -webkit-flex;
