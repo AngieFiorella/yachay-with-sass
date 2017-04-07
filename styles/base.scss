@@ -19,9 +19,9 @@ header { padding: 30px 0; }
 
 
 .flex-content {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  @include align-items(center);
+  @include display-flex;
+  @include justify-content(space-between);
 }
 
 i.call {
@@ -43,9 +43,9 @@ i.call {
 }
 
 .flex-center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include align-items(center);
+  @include display-flex;
+  @include justify-content(center);
 }
 
 .features-page { position: relative; }
@@ -90,13 +90,13 @@ i.call {
 }
 
 .menu {
-  align-items: center;
-  display: flex;
+  @include align-items(center);
+  @include display-flex;
   z-index: 3;
   li {
     background-color: $deepblue;
     border-right: 1px solid $black;
-    flex-basis: 15%;
+    @include flex-basis(15%);
     padding: 20px;
     text-align: center;
     transition: all .3s;
@@ -107,7 +107,7 @@ i.call {
     }
     &:last-of-type {
       border-right: 0;
-      flex-basis: 30%;
+      @include flex-basis(30%);
       padding: 15px;
       &:hover div {
         border: 1px solid $white;
@@ -122,7 +122,7 @@ i.call {
   }
   .house-bg {
     background-color: $medium-gray;
-    flex-basis: 10%;
+    @include flex-basis(10%);
     padding: 16px 20px 15px;
     transition: all .3s;
     &:hover {
@@ -155,21 +155,21 @@ i.house { font-size: 2em; }
 }
 
 i.server-image {
-  align-items: center;
+  @include align-items(center);
   background-color: $orange;
   border-radius: 100%;
   color: $white;
-  display: flex;
+  @include display-flex;
   font-size: 2em;
   height: 70px;
-  justify-content: center;
+  @include justify-content(center);
   margin: 0px;
   padding: 0px;
   width: 70px;
 }
 
 .main-information {
-  display: flex;
+  @include display-flex;
   padding: 90px 0;
 }
 
@@ -191,9 +191,9 @@ h2 {
   margin-top: 15px;
 }
 
-.information { flex-basis: 70%; }
+.information { @include flex-basis(70%); }
 
-.price { flex-basis: 30%; }
+.price { @include flex-basis(30%); }
 
 .hosting-features {
   color: $white;
@@ -214,8 +214,8 @@ h2 {
 }
 
 .group-price-month {
-  display: flex;
-  flex-direction: column;
+  @include display-flex;
+  @include flex-direction(column);
   margin-left: 10px;
 }
 
@@ -243,12 +243,12 @@ h2 {
 }
 
 .fixing-items {
-  display: flex;
+  @include display-flex;
   font-weight: 500;
-  justify-content: flex-end;
+  @include justify-content(flex-end);
   .price-info {
     font-weight: 300;
-    justify-content: center;
+    @include justify-content(center);
     text-align: center;
   }
 }
@@ -263,8 +263,8 @@ h2 {
 .month-detail { font-size: 1.3em; }
 
 .fixing-items.price-info {
-  display: flex;
-  justify-content: center;
+  @include display-flex;
+  @include justify-content(center);
   .big-size-price { font-size: 2em; }
   .little-size-price {
     font-size: 1em;
@@ -278,10 +278,10 @@ h2 {
   border: 0;
   color: $white;
   cursor: pointer;
-  display: flex;
+  @include display-flex;
   font-size: 1.2em;
   font-weight: 500;
-  justify-content: center;
+  @include justify-content(center);
   margin-top: 15px;
   padding: 15px;
   text-transform: uppercase;
@@ -306,7 +306,7 @@ h2 {
 }
 
 .plans {
-  display: flex;
+  @include display-flex;
   padding-bottom: 50px;
 }
 
@@ -325,9 +325,9 @@ h2 {
 }
 
 .title-card {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include align-items(center);
+  @include display-flex;
+  @include justify-content(center);
   padding-bottom: 10px;
   padding-top: 20px;
 }
@@ -338,8 +338,8 @@ h2 {
 }
 .little-money {
   color: $white;
-  display: flex;
-  flex-direction: column;
+  @include display-flex;
+  @include flex-direction(column);
   font-size: 1.1em;
   font-weight: 500;
   margin-left: 5px;
@@ -350,12 +350,6 @@ h2 {
   display: inline;
   font-size: 2.5em;
   font-weight: 500;
-}
-
-.full-price {
-  align-items: center;
-  display: flex;
-  justify-content: center;
 }
 
 .month {
@@ -403,9 +397,9 @@ b { font-weight: 500; }
   border: 0;
   color: $white;
   cursor: pointer;
-  display: flex;
+  @include display-flex;
   font-weight: 500;
-  justify-content: center;
+  @include justify-content(center);
   padding-bottom: 8px;
   padding-top: 8px;
   text-transform: uppercase;
@@ -419,12 +413,12 @@ footer {
 
 .footer-page {
   color: $white;
-  display: flex;
+  @include display-flex;
 }
 
 .footer-info {
   border-right: 0.8px solid #757C82;
-  flex-basis: 25%;
+  @include flex-basis(25%);
   text-align: center;
   &:last-of-type { border-right: 0; }
 }
@@ -490,10 +484,8 @@ i.fa-book, i.fa-line-chart {
 .carousel-wrapper { padding: 0 50px; }
 
 .carousel-wrapper .owl-carousel.owl-drag .owl-item {
-  align-items: center;
-  display: flex;
+  @extend .flex-center;
   height: 120px;
-  justify-content: center;
 }
 
 .carousel-outer { position: relative; }
@@ -513,9 +505,6 @@ i.fa-book, i.fa-line-chart {
 }
 
 .social-networking-sites {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   li {
     display: inline-block;
     margin-right: 10px;
@@ -544,8 +533,8 @@ i.fa-book, i.fa-line-chart {
     margin-bottom: 100px;
   }
   .plans {
-    display: flex;
-    flex-direction: column;
+    @include display-flex;
+    @include flex-direction(column);
   }
   .hosting-features {
     display: none;
@@ -556,7 +545,7 @@ i.fa-book, i.fa-line-chart {
   .support { display: none; }
   header {
     padding: 20px;
-    .flex-content { justify-content: center; }
+    .flex-content { @include justify-content(center); }
     .logo { width: 150px; }
   }
 
@@ -600,19 +589,21 @@ i.fa-book, i.fa-line-chart {
   }
   .information {
     display: none; }
-  .main-information { padding: 92px; }
   .card {
-    width: 80%;
-    margin-bottom: 60px;
+    width: 100%;
+    margin-bottom: 80px;
   }
   .plans {
-    display: flex;
-    flex-direction: column;
+    @include display-flex;
+    @include flex-direction(column);
   }
   .footer-page article{
     display: none;
     &:last-of-type { display: block;}
   }
   .divider { display: none; }
+  .price {
+    margin: 0 auto;
+  }
 
 }

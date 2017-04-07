@@ -89,8 +89,21 @@ header {
   padding: 30px 0; }
 
 .flex-content {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
   justify-content: space-between; }
 
 i.call {
@@ -108,9 +121,22 @@ i.call {
   font-size: 1.3em;
   font-weight: 500; }
 
-.flex-center {
+.flex-center, .carousel-wrapper .owl-carousel.owl-drag .owl-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center; }
 
 .features-page {
@@ -150,12 +176,24 @@ i.call {
   transition: all .3s ease; }
 
 .menu {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 3; }
   .menu li {
     background-color: #293847;
     border-right: 1px solid #000;
+    -webkit-flex-basis: 15%;
+    -moz-flex-basis: 15%;
+    -ms-flex-preferred-size: 15%;
     flex-basis: 15%;
     padding: 20px;
     text-align: center;
@@ -166,6 +204,9 @@ i.call {
       cursor: pointer; }
     .menu li:last-of-type {
       border-right: 0;
+      -webkit-flex-basis: 30%;
+      -moz-flex-basis: 30%;
+      -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
       padding: 15px; }
       .menu li:last-of-type:hover div {
@@ -177,6 +218,9 @@ i.call {
       text-transform: uppercase; }
   .menu .house-bg {
     background-color: #B5B5B5;
+    -webkit-flex-basis: 10%;
+    -moz-flex-basis: 10%;
+    -ms-flex-preferred-size: 10%;
     flex-basis: 10%;
     padding: 16px 20px 15px;
     transition: all .3s; }
@@ -206,19 +250,37 @@ i.house {
   min-height: 500px; }
 
 i.server-image {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
   background-color: #E85B21;
   border-radius: 100%;
   color: #FFF;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 2em;
   height: 70px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   margin: 0px;
   padding: 0px;
   width: 70px; }
 
 .main-information {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 90px 0; }
 
@@ -240,9 +302,15 @@ h2 {
   margin-top: 15px; }
 
 .information {
+  -webkit-flex-basis: 70%;
+  -moz-flex-basis: 70%;
+  -ms-flex-preferred-size: 70%;
   flex-basis: 70%; }
 
 .price {
+  -webkit-flex-basis: 30%;
+  -moz-flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
   flex-basis: 30%; }
 
 .hosting-features {
@@ -261,7 +329,17 @@ h2 {
   text-align: right; }
 
 .group-price-month {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin-left: 10px; }
 
@@ -286,11 +364,24 @@ h2 {
   text-align: right; }
 
 .fixing-items {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   font-weight: 500;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
   justify-content: flex-end; }
   .fixing-items .price-info {
     font-weight: 300;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center;
     text-align: center; }
 
@@ -305,7 +396,16 @@ h2 {
   font-size: 1.3em; }
 
 .fixing-items.price-info {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center; }
   .fixing-items.price-info .big-size-price {
     font-size: 2em; }
@@ -320,9 +420,18 @@ h2 {
   border: 0;
   color: #FFF;
   cursor: pointer;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.2em;
   font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   margin-top: 15px;
   padding: 15px;
@@ -350,6 +459,11 @@ h2 {
       color: #FFF; }
 
 .plans {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 50px; }
 
@@ -366,8 +480,21 @@ h2 {
   text-transform: uppercase; }
 
 .title-card {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   padding-bottom: 10px;
   padding-top: 20px; }
@@ -378,7 +505,17 @@ h2 {
 
 .little-money {
   color: #FFF;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-size: 1.1em;
   font-weight: 500;
@@ -389,11 +526,6 @@ h2 {
   display: inline;
   font-size: 2.5em;
   font-weight: 500; }
-
-.full-price {
-  align-items: center;
-  display: flex;
-  justify-content: center; }
 
 .month {
   color: #E85B21;
@@ -436,8 +568,17 @@ b {
   border: 0;
   color: #FFF;
   cursor: pointer;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   font-weight: 500;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -450,10 +591,18 @@ footer {
 
 .footer-page {
   color: #FFF;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex; }
 
 .footer-info {
   border-right: 0.8px solid #757C82;
+  -webkit-flex-basis: 25%;
+  -moz-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
   text-align: center; }
   .footer-info:last-of-type {
@@ -519,10 +668,7 @@ i.fa-book, i.fa-line-chart {
   padding: 0 50px; }
 
 .carousel-wrapper .owl-carousel.owl-drag .owl-item {
-  align-items: center;
-  display: flex;
-  height: 120px;
-  justify-content: center; }
+  height: 120px; }
 
 .carousel-outer {
   position: relative; }
@@ -543,15 +689,11 @@ i.fa-book, i.fa-line-chart {
   .controller.right {
     right: 0; }
 
-.social-networking-sites {
-  align-items: center;
-  display: flex;
-  justify-content: center; }
-  .social-networking-sites li {
-    display: inline-block;
-    margin-right: 10px; }
-    .social-networking-sites li a {
-      font-size: 1.2em; }
+.social-networking-sites li {
+  display: inline-block;
+  margin-right: 10px; }
+  .social-networking-sites li a {
+    font-size: 1.2em; }
 
 @media screen and (max-width: 1200px) {
   .main-information {
@@ -576,7 +718,17 @@ i.fa-book, i.fa-line-chart {
     margin-bottom: 100px; }
 
   .plans {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .hosting-features {
@@ -588,6 +740,10 @@ i.fa-book, i.fa-line-chart {
   header {
     padding: 20px; }
     header .flex-content {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
       justify-content: center; }
     header .logo {
       width: 150px; }
@@ -634,15 +790,22 @@ i.fa-book, i.fa-line-chart {
   .information {
     display: none; }
 
-  .main-information {
-    padding: 92px; }
-
   .card {
-    width: 80%;
-    margin-bottom: 60px; }
+    width: 100%;
+    margin-bottom: 80px; }
 
   .plans {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column; }
 
   .footer-page article {
@@ -651,6 +814,9 @@ i.fa-book, i.fa-line-chart {
       display: block; }
 
   .divider {
-    display: none; } }
+    display: none; }
+
+  .price {
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=styles.css.map */
